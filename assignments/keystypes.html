@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+    <a class="a-nounderline" href="../">
+        <h1><i>i</i> sight</h1>
+    </a>
+
+    <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="../">
+                <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="../assignments.html">
+                <span itemprop="name">Assignments</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">DBMS Terminologies</span>
+            </a>
+            <meta itemprop="position" content="4" />
+        </li>
+    </ol>
+
+    <div class="container-lg px-3 my-5 markdown-body">
+
+        <h1><a href="https://darshan6424.github.io/DBMS/">DBMS</a></h1>
+
+
+        <h1 id="keys">Keys</h1>
+        <p>Keys are the unique identifier used in <strong>DBMS</strong> to uniquely identify a tuple(s)or rows n a
+            table.</p>
+
+        <p>We can easily understand the idea of the keys by visualizing the following example of student databse with
+            their project.</p>
+
+        <h3 id="college-database-example"><strong>College Database Example</strong><a class="anchorjs-link "
+                href="#college-database-example" aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+
+        <p>We have the following tables for the database:</p>
+
+        <ol>
+            <li><strong>Students</strong></li>
+            <li><strong>Projects</strong></li>
+        </ol>
+
+        <h3 id="tables-and-data"><strong>Tables and Data</strong><a class="anchorjs-link " href="#tables-and-data"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+
+        <h4 id="1-students-table"><strong>1. Students Table</strong><a class="anchorjs-link " href="#1-students-table"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>CitizenshipNumber</th>
+                    <th>PANNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Darshan Subedi</td>
+                    <td>Kawasoti</td>
+                    <td>Physical</td>
+                    <td>1234567890</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Creation Duwal</td>
+                    <td>Bhaktapur</td>
+                    <td>Physical</td>
+                    <td>0987654321</td>
+                    <td>987654321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bimin Kiran Koju</td>
+                    <td>Bhaktapur</td>
+                    <td>Biology</td>
+                    <td>1122334455</td>
+                    <td>112233445</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Srijan Pokhrel</td>
+                    <td>Kawasoti</td>
+                    <td>Biology</td>
+                    <td>5566778899</td>
+                    <td>556677889</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 id="2-projects-table"><strong>2. Projects Table</strong><a class="anchorjs-link " href="#2-projects-table"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ProjectNumber</th>
+                    <th>ProjectName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>101</td>
+                    <td>Quantum Mechanics</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Astrophysics</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>Molecular Biology</td>
+                </tr>
+                <tr>
+                    <td>104</td>
+                    <td>Cell Biology</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 id="3-studentprojects-table"><strong>3. StudentProjects Table</strong><a class="anchorjs-link "
+                href="#3-studentprojects-table" aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ProjectNumber</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>Lead Researcher</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>102</td>
+                    <td>Contributor</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>Lead Researcher</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>Researcher</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>104</td>
+                    <td>Contributor</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 id="types-of-keys-explained"><strong>Types of Keys Explained</strong><a class="anchorjs-link "
+                href="#types-of-keys-explained" aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+
+        <p>Let’s break down the different types of keys using the <strong>Students</strong> and
+            <strong>StudentProjects</strong> tables:</p>
+
+        <hr>
+
+        <h4 id="1-primary-key"><strong>1. Primary Key</strong><a class="anchorjs-link " href="#1-primary-key"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <p><strong>Definition:</strong> A primary key is a field (or a combination of fields) that uniquely identifies
+            each record in a table. It ensures that every record is unique and not null.</p>
+
+        <p><strong>Example:</strong></p>
+
+        <ul>
+            <li><strong>Students Table:</strong> <code class="language-plaintext highlighter-rouge">ID</code> is the
+                primary key.</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>CitizenshipNumber</th>
+                    <th>PANNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Darshan Subedi</td>
+                    <td>Kawasoti</td>
+                    <td>Physical</td>
+                    <td>1234567890</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Creation Duwal</td>
+                    <td>Bhaktapur</td>
+                    <td>Physical</td>
+                    <td>0987654321</td>
+                    <td>987654321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bimin Kiran Koju</td>
+                    <td>Bhaktapur</td>
+                    <td>Biology</td>
+                    <td>1122334455</td>
+                    <td>112233445</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Srijan Pokhrel</td>
+                    <td>Kawasoti</td>
+                    <td>Biology</td>
+                    <td>5566778899</td>
+                    <td>556677889</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Why It Matters:</strong> <code class="language-plaintext highlighter-rouge">ID</code> must be unique
+            for each student, ensuring no two students have the same ID and every student can be uniquely identified.
+        </p>
+
+        <h4 id="2-foreign-key"><strong>2. Foreign Key</strong><a class="anchorjs-link " href="#2-foreign-key"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <p><strong>Definition:</strong> A foreign key is a field (or a combination of fields) in one table that refers
+            to the primary key in another table. It creates a relationship between the two tables.</p>
+
+        <p><strong>Examples:</strong></p>
+
+        <ul>
+            <li><strong>StudentProjects Table:</strong>
+                <ul>
+                    <li><code class="language-plaintext highlighter-rouge">ID</code> is a foreign key that refers to
+                        <code class="language-plaintext highlighter-rouge">ID</code> in the Students table.</li>
+                    <li><code class="language-plaintext highlighter-rouge">ProjectNumber</code> is a foreign key that
+                        refers to <code class="language-plaintext highlighter-rouge">ProjectNumber</code> in the
+                        Projects table.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ProjectNumber</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>Lead Researcher</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>102</td>
+                    <td>Contributor</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>Lead Researcher</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>Researcher</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>104</td>
+                    <td>Contributor</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Why It Matters:</strong> It links <code
+                class="language-plaintext highlighter-rouge">StudentProjects</code> with <code
+                class="language-plaintext highlighter-rouge">Students</code> and <code
+                class="language-plaintext highlighter-rouge">Projects</code>, ensuring that every <code
+                class="language-plaintext highlighter-rouge">ID</code> and <code
+                class="language-plaintext highlighter-rouge">ProjectNumber</code> in <code
+                class="language-plaintext highlighter-rouge">StudentProjects</code> correspond to valid entries in <code
+                class="language-plaintext highlighter-rouge">Students</code> and <code
+                class="language-plaintext highlighter-rouge">Projects</code>, respectively.</p>
+
+        <h4 id="3-composite-key"><strong>3. Composite Key</strong><a class="anchorjs-link " href="#3-composite-key"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <p><strong>Definition:</strong> A composite key uses two or more columns to uniquely identify a record in a
+            table.</p>
+
+        <p><strong>Example:</strong></p>
+
+        <ul>
+            <li><strong>StudentProjects Table:</strong> <code class="language-plaintext highlighter-rouge">ID</code> and
+                <code class="language-plaintext highlighter-rouge">ProjectNumber</code> together form the composite key.
+            </li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ProjectNumber</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>Lead Researcher</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>102</td>
+                    <td>Contributor</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>Lead Researcher</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>Researcher</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>104</td>
+                    <td>Contributor</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Why It Matters:</strong> <code class="language-plaintext highlighter-rouge">ID</code> + <code
+                class="language-plaintext highlighter-rouge">ProjectNumber</code> together ensure that each record is
+            unique. This combination is used to track which student works on which project.</p>
+
+        <h4 id="4-candidate-key"><strong>4. Candidate Key</strong><a class="anchorjs-link " href="#4-candidate-key"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <p><strong>Definition:</strong> A candidate key is a column or a set of columns that can be a primary key. There
+            can be multiple candidate keys in a table, but only one is chosen as the primary key.</p>
+
+        <p><strong>Example:</strong></p>
+
+        <ul>
+            <li><strong>Students Table:</strong> <code class="language-plaintext highlighter-rouge">ID</code> and <code
+                    class="language-plaintext highlighter-rouge">PANNumber</code> are both candidate keys.</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>PANNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>987654321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>112233445</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>556677889</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Why It Matters:</strong> <code class="language-plaintext highlighter-rouge">ID</code> is chosen as
+            the primary key, but <code class="language-plaintext highlighter-rouge">PANNumber</code> is also unique and
+            could serve as a primary key.</p>
+
+        <h4 id="5-alternate-key"><strong>5. Alternate Key</strong><a class="anchorjs-link " href="#5-alternate-key"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <p><strong>Definition:</strong> An alternate key is a candidate key that is not selected as the primary key.</p>
+
+        <p><strong>Example:</strong></p>
+
+        <ul>
+            <li><strong>Students Table:</strong>
+                <ul>
+                    <li><strong>Primary Key:</strong> <code class="language-plaintext highlighter-rouge">ID</code></li>
+                    <li><strong>Alternate Key:</strong> <code
+                            class="language-plaintext highlighter-rouge">PANNumber</code></li>
+                </ul>
+            </li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>PANNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>987654321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>112233445</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>556677889</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Why It Matters:</strong> <code class="language-plaintext highlighter-rouge">PANNumber</code> is a
+            unique identifier but is not used as the primary key. It provides an alternative unique way to identify
+            students.</p>
+
+        <h4 id="6-artificial-key"><strong>6. Artificial Key</strong><a class="anchorjs-link " href="#6-artificial-key"
+                aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+
+        <p><strong>Definition:</strong> An artificial key (or surrogate key) is a key created specifically to uniquely
+            identify records, often using an auto-incremented integer.</p>
+
+        <p><strong>Example:</strong></p>
+
+        <ul>
+            <li><strong>Students Table:</strong> <code class="language-plaintext highlighter-rouge">ID</code> is an
+                artificial key.</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>CitizenshipNumber</th>
+                    <th>PANNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Darshan Subedi</td>
+                    <td>Kawasoti</td>
+                    <td>Physical</td>
+                    <td>1234567890</td>
+                    <td>123456789</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Creation Duwal</td>
+                    <td>Bhaktapur</td>
+                    <td>Physical</td>
+                    <td>0987654321</td>
+                    <td>987654321</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bimin Kiran Koju</td>
+                    <td>Bhaktapur</td>
+                    <td>Biology</td>
+                    <td>1122334455</td>
+                    <td>112233445</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Srijan Pokhrel</td>
+                    <td>Kawasoti</td>
+                    <td>Biology</td>
+                    <td>5566778899</td>
+                    <td>556677889</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Why It Matters:</strong> <code class="language-plaintext highlighter-rouge">ID</code> is
+            auto-generated to ensure that each student has a unique identifier, even if there is no natural key for this
+            purpose.</p>
+
+        <h3 id="summary-of-key-types"><strong>Summary of Key Types</strong><a class="anchorjs-link "
+                href="#summary-of-key-types" aria-label="Anchor" data-anchorjs-icon=""
+                style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Key Type</th>
+                    <th>Definition</th>
+                    <th>Example</th>
+                    <th>Why It Matters</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Primary Key</strong></td>
+                    <td>Uniquely identifies each record in a table</td>
+                    <td><code class="language-plaintext highlighter-rouge">ID</code> in Students Table</td>
+                    <td>Ensures no two records are the same and cannot be null.</td>
+                </tr>
+                <tr>
+                    <td><strong>Foreign Key</strong></td>
+                    <td>Refers to the primary key in another table</td>
+                    <td><code class="language-plaintext highlighter-rouge">ID</code> in StudentProjects Table</td>
+                    <td>Links tables together and ensures referential integrity.</td>
+                </tr>
+                <tr>
+                    <td><strong>Composite Key</strong></td>
+                    <td>Uses two or more columns to uniquely identify a record</td>
+                    <td><code class="language-plaintext highlighter-rouge">ID</code> + <code
+                            class="language-plaintext highlighter-rouge">ProjectNumber</code> in StudentProjects Table
+                    </td>
+                    <td>Allows for complex uniqueness requirements.</td>
+                </tr>
+                <tr>
+                    <td><strong>Candidate Key</strong></td>
+                    <td>Potential primary keys from which one is chosen</td>
+                    <td><code class="language-plaintext highlighter-rouge">ID</code> and <code
+                            class="language-plaintext highlighter-rouge">PANNumber</code> in Students Table</td>
+                    <td>Multiple options for primary keys; only one is chosen.</td>
+                </tr>
+                <tr>
+                    <td><strong>Alternate Key</strong></td>
+                    <td>A candidate key not chosen as the primary key</td>
+                    <td><code class="language-plaintext highlighter-rouge">PANNumber</code> in Students Table</td>
+                    <td>Provides additional unique ways to identify records.</td>
+                </tr>
+                <tr>
+                    <td><strong>Artificial Key</strong></td>
+                    <td>A key created specifically to uniquely identify records</td>
+                    <td><code class="language-plaintext highlighter-rouge">ID</code> (auto-incremented)</td>
+                    <td>Ensures a unique identifier even if there is no natural key.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <style>
+        th, td {
+            border: 1px solid black;
+            padding: 2px 10px 2px 10px;
+        }
+    </style>
+</body>
+
+</html>

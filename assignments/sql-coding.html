@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+  <a class="a-nounderline" href="../">
+    <h1><i>i</i> sight</h1>
+  </a>
+
+  <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemprop="item" href="../">
+        <span itemprop="name">Home</span>
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemprop="item" href="../assignments.html">
+        <span itemprop="name">Assignments</span>
+      </a>
+      <meta itemprop="position" content="2" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemprop="item" href="#">
+        <span itemprop="name">DBMS Terminologies</span>
+      </a>
+      <meta itemprop="position" content="4" />
+    </li>
+  </ol>
+
+  <div class="container-lg px-3 my-5 markdown-body">
+
+    <h1><a href="https://darshan6424.github.io/DBMS/">DBMS</a></h1>
+
+
+
+    <hr>
+
+    <h1 id="practice-sql-coding">Practice SQL Coding</h1>
+
+    <p>We were assigned a task to try out some <code class="language-plaintext highlighter-rouge">SQL</code> keywords by
+      launching a local host XAMPP server with phpMyAdmin.</p>
+
+    <p>To fulfill the task, I first downloaded the XAMPP control panel software on my laptop and launched the local host
+      server hosted at <code class="language-plaintext highlighter-rouge">https://localhost/phpmyadmin</code>. Then,
+      through it, the following <code class="language-plaintext highlighter-rouge">SQL</code> keywords were run to
+      understand them.</p>
+
+    <h3 id="sql-keywords">SQL Keywords:<a class="anchorjs-link " href="#sql-keywords" aria-label="Anchor"
+        data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+    <ol>
+      <li><strong>CREATE</strong></li>
+      <li><strong>DROP</strong></li>
+      <li><strong>ALTER</strong></li>
+      <li><strong>ADD</strong></li>
+      <li><strong>UPDATE</strong></li>
+      <li><strong>SET</strong></li>
+      <li><strong>INSERT</strong></li>
+      <li><strong>SELECT</strong></li>
+    </ol>
+
+    <hr>
+
+    <h3 id="implementation">Implementation<a class="anchorjs-link " href="#implementation" aria-label="Anchor"
+        data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+
+    <p><strong>Step 1: Creating a Database Named <code
+          class="language-plaintext highlighter-rouge">GRADE_12</code></strong></p>
+
+    <p><img src="../assets/create.PNG" alt="Create Database"></p>
+
+    <p><strong>Inside the Database:</strong></p>
+
+    <p><img src="../assets/inside the databse-2.PNG" alt="alt text"></p>
+
+    <p><strong>Step 2: Creating a Table Named <code
+          class="language-plaintext highlighter-rouge">Section_g</code></strong></p>
+
+    <p>Navigate inside the database to the <code class="language-plaintext highlighter-rouge">SQL Query</code> tab to
+      create a table named <strong>Section_g</strong>.</p>
+
+    <p><img src="../assets/creating%20table.PNG" alt="Creating Table"></p>
+
+    <p><strong>Database After Creating Tables:</strong></p>
+
+    <p><img src="../assets/TABLE%20AFTER%20DROPPING%20AGE.PNG" alt="Table After Dropping Age"></p>
+
+    <p><strong>Step 3: Adding a New Column Named <code class="language-plaintext highlighter-rouge">AGE</code></strong>
+    </p>
+
+    <p>To understand modifying table data, I added a new column named <code
+        class="language-plaintext highlighter-rouge">AGE</code>.</p>
+
+    <p><img src="../assets/ALTERING TBALE BY ADDING COLUMN-1.PNG" alt="alt text"></p>
+
+    <p><strong>After Adding the Age Column:</strong></p>
+
+    <p><img src="../assets/TABLE%20AFTER%20AGE%20COLUMN.PNG" alt="Table After Adding Age Column"></p>
+
+    <p><strong>Step 4: Dropping the <code class="language-plaintext highlighter-rouge">AGE</code> Column</strong></p>
+
+    <p>To understand the deleting mechanism, the newly created <code
+        class="language-plaintext highlighter-rouge">AGE</code> column was then dropped.</p>
+
+    <p><img src="../assets/DROPPING%20TABLE%20AGE.PNG" alt="Dropping Age Column"></p>
+
+    <p><strong>Table After Dropping Age Column:</strong></p>
+
+    <p><img src="../assets/TABLE%20AFTER%20DROPPING%20AGE-1.PNG" alt="Table After Dropping Age"></p>
+
+    <p><strong>Step 5: Dropping the Table <code class="language-plaintext highlighter-rouge">Section_g</code></strong>
+    </p>
+
+    <p>Navigate to the SQL tab of the database <code class="language-plaintext highlighter-rouge">GRADE_12</code> to
+      drop the table <code class="language-plaintext highlighter-rouge">Section_g</code>.</p>
+
+    <p><img src="../assets/DROPPING%20FULL%20TABLE.PNG" alt="Dropping Full Table"></p>
+
+    <p><strong>Database After Dropping the Table <code
+          class="language-plaintext highlighter-rouge">Section_g</code>:</strong></p>
+
+    <p><img src="../assets/inside the databse.PNG" alt="alt text"></p>
+
+    <p><strong>Step 6: Dropping the Database <code class="language-plaintext highlighter-rouge">GRADE_12</code></strong>
+    </p>
+
+    <p>Navigate to the server SQL tab to drop the newly created database.</p>
+
+    <p><img src="../assets/droppping the databse.PNG" alt="alt text"></p>
+
+    <p><strong>Server After Dropping Database <code
+          class="language-plaintext highlighter-rouge">GRADE_12</code>:</strong></p>
+
+    <p><img src="../assets/the%20database%20is%20dropped.PNG" alt="Database Dropped"></p>
+
+    <hr>
+
+
+
+
+  </div>
+
+  <style>
+    th,
+    td {
+      border: 1px solid black;
+      padding: 2px 10px 2px 10px;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  </style>
+</body>
+
+</html>
