@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+
+  <body>
+    <a class="a-nounderline" href="../">
+      <h1><i>i</i> sight</h1>
+    </a>
+
+    <ol
+      class="breadcrumb"
+      itemscope
+      itemtype="http://schema.org/BreadcrumbList"
+    >
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="../">
+          <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="../assignments.html">
+          <span itemprop="name">Assignments</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="#">
+          <span itemprop="name"> Database Models </span>
+        </a>
+        <meta itemprop="position" content="4" />
+      </li>
+    </ol>
+
+    <div class="container-lg px-3 my-5">
+      <h1>Database Models</h1>
+
+      <p>
+        The different way in which databases and be structured are known as
+        database models. It is the collection of conceptual tools for describing
+        data in a database.
+      </p>
+
+      <h3>1. Hierarchical Model</h3>
+      <p>
+        The hierarchical model organizes data in a tree-like structure in which
+        there is a single parent for each record. This model is best suited for
+        one-to-many relationships.
+      </p>
+      <h3>2. Network Database Model</h3>
+      <p>
+        The network database model allows each record to have multiple parent
+        and child records, creating a more flexible structure. This model is
+        best suited for many-to-many relationships.
+      </p>
+      <h3>3. Relational Database Model</h3>
+      <p>
+        The relational database model organizes data into tables, with each
+        table consisting of rows and columns. This model is best suited for
+        complex data relationships and is the most widely used database model
+        today.
+      </p>
+    </div>
+  </body>
+</html>
