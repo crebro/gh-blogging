@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+
+  <body>
+    <a class="a-nounderline" href="../">
+      <h1><i>i</i> sight</h1>
+    </a>
+
+    <ol
+      class="breadcrumb"
+      itemscope
+      itemtype="http://schema.org/BreadcrumbList"
+    >
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="../">
+          <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="../assignments.html">
+          <span itemprop="name">Assignments</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="#">
+          <span itemprop="name"> SQL Logical Operations </span>
+        </a>
+        <meta itemprop="position" content="4" />
+      </li>
+    </ol>
+
+    <div class="container-lg px-3 my-10">
+      <hr />
+      <h2>SQL Logical Operations</h2>
+
+      <p>The following are some example usages of SQL Logical Operations.</p>
+      <hr />
+
+      <p>
+        <b>AND: <br /></b> SELECT * FROM EMPLOYEE <br />
+        WHERE SALARY &lt; 10000 AND AGE&gt;25<br />
+        <br />
+        <b>OR: </b><br />
+        SELECT * FROM STUDENTS WHERE RANK &gt;20 OR MARKS &gt;600;
+        <br /><br />
+        <b>NOT : </b><br />
+        SELECT * FROM EMP WHERE NOT SALARY =10000;<br /><br /><br />
+        <b><u>ORDER-Ing OPERATION</u></b
+        ><br /><br />
+        <b>ASC: </b><br />
+        SELECT * FROM EMP ORDER BY ID ASC;
+        <br /><br />
+        <b>DESC:</b><br />
+        SELECT* FROM EMP ORDER BY ID DESC;
+        <br /><br />
+        <b><u>GROUP-ING operation </u></b>
+        <br /><br /><br />
+        SELECT* FNAME ,lNAME FROM EMP GROUP BY Name;
+        <br /><br />
+        <b><u>AGGREGATE FUNCTIONS( MATHEMATICAL OPERATIONS) </u></b><br /><br />
+        <br />
+        <b>AVERAGE: <br /> </b>SELECT avg(salary) FROM EMP;<br /><br />
+        <b>MINIMUM:<br /></b>SELECT MIN(salary) FROM EMP;<br /><br />
+        <b>MAXIMUM: <br /></b>SELECT max (salary) FROM EMP;<br /><br />
+        <b>SUM: <br /></b>SELECT sum(salary) FROM EMP;<br /><br />
+        <b>COUNT:<br /></b>SELECT (id) FORM EMP;<br /><br />
+        <b>DISTINCT:<br /></b>SELECT distinct(name) FROM EMP;<br /><br />
+        <b>ROUND: <br /></b>SELECT ROUND(MARKS,2) FROM STUDENTS;<br /><br />
+        <b><u>String Functions ( String Handeing Functions)</u></b
+        ><br /><br /><br />
+        <b>LENGTH: <br /></b>SELECT LEN(`APPLE`);<br /><br />
+        <b>REVERSE:<br /></b>SELECT REVERSE(`APPLE`);<br /><br />
+        <b>REPLICATE:<br /></b>SELECT REPLICATE(`APPLE`,S);<br /><br />
+        <b>UPPERCASE:<br /></b>SELECT UPPERCASE (`apple`);<br /><br />
+        <b>LOWERCASE:<br /></b>SELECT LOWERCASE (`APPLE);<br /><br />
+        <b>CONCATENATION:<br /></b>SELECT CONCATENATION (`NE’.’PA’,’L’);<br /><br />
+        <b>LEFT MOST CHARACTER:<br /></b>SELECT LEFT (`APPLE`,3);<br /><br />
+        <b>RIGHT MOST CHARACTER: <br /></b>SELECT RIGHT(`APPLE`,3);<br /><br />
+        <br />
+        <b><u>OTHERS</u></b
+        ><br /><br />
+        <b>IN:<br /></b>SELECT ADDRESS FROM STD; WHERE IN
+        (“KTM”,:BIKE”,”PTN”);<br /><br />
+        <b>BETWEEN: <br /></b>SELECT SALARY FROM EMP BETWEEN 3000 AND 40000;<br /><br />
+        <b>PERCENTAGE: <br /></b>SELECT NAME FROM STD NAME “%a”;<br /><br />
+        <b>UNDERSCORE: <br /></b>SELECT NAME FROM STD LIKE”%__B”<br /><br />
+        <b>HAVING: <br /></b>ELECT NAME FROM STD WHERE GRADE =”A” HAVING
+        MARKS&gt;800<br /><br />
+      </p>
+    </div>
+  </body>
+</html>

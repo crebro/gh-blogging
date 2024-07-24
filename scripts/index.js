@@ -14,7 +14,7 @@ for (let i = 0; i < imgElements.length; i++) {
       }, 100);
     }
 
-    imgElements[i].classList.toggle("img-selected");
+    imgElements[i].classList.toggle(`img-selected`);
     body[0].classList.toggle("non-scrollable");
     overlayelem.classList.toggle("overlay");
   });

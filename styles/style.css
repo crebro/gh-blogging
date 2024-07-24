@@ -120,14 +120,12 @@ img {
   border-radius: 5px;
   box-shadow: 5px 10px;
   outline: 1px solid black;
-  transition: 200ms;
+  transition-duration: 200ms;
   cursor: zoom-in;
 }
 
-.img-selected {
+/* .img-selected {
   position: fixed;
-  width: 80vw;
-  height: auto;
   z-index: 20;
   left: 0;
   top: 0;
@@ -136,6 +134,25 @@ img {
   margin: auto;
   object-fit: cover;
   cursor: zoom-out;
+} */
+
+.img-selected {
+  width: 80vw;
+  height: auto;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  object-fit: cover;
+  cursor: zoom-out;
+}
+
+.img-horizontal {
+  height: 80vh;
+  width: auto;
 }
 
 .img-intermediary {

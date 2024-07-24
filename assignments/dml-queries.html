@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+
+  <body>
+    <a class="a-nounderline" href="../">
+      <h1><i>i</i> sight</h1>
+    </a>
+
+    <ol
+      class="breadcrumb"
+      itemscope
+      itemtype="http://schema.org/BreadcrumbList"
+    >
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="../">
+          <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="../assignments.html">
+          <span itemprop="name">Assignments</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li
+        itemprop="itemListElement"
+        itemscope
+        itemtype="http://schema.org/ListItem"
+      >
+        <a itemprop="item" href="#">
+          <span itemprop="name">DBMS Terminologies</span>
+        </a>
+        <meta itemprop="position" content="4" />
+      </li>
+    </ol>
+
+    <div class="container-lg px-3 my-5 markdown-body">
+      <h1><a href="https://darshan6424.github.io/DBMS/">DBMS</a></h1>
+
+      <h1 id="data-manipulation-language-dml">
+        Data Manipulation Language (DML)
+      </h1>
+
+      <h2 id="introduction">
+        Introduction<a
+          class="anchorjs-link"
+          href="#introduction"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>
+        Data Manipulation Language (DML) is a subset of SQL (Structured Query
+        Language) used for managing and manipulating data in a relational
+        database. To focus on manipulating the existing databsase by either
+        adding new stuff or modifying existing data to perform some analysis as
+        well.
+      </p>
+
+      <h2 id="key-concepts-of-dml">
+        Key Concepts of DML<a
+          class="anchorjs-link"
+          href="#key-concepts-of-dml"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>
+        DML commands are used to perform operations on the data stored in a
+        database. These operations are essential for handling the data and
+        ensuring that it meets the needs of the users or applications. Here’s a
+        breakdown of the core DML commands:
+      </p>
+
+      <ul>
+        <li><strong>SELECT</strong>: Retrieve data from one or more tables.</li>
+        <li><strong>INSERT</strong>: Add new records to a table.</li>
+        <li><strong>UPDATE</strong>: Modify existing records in a table.</li>
+        <li><strong>DELETE</strong>: Remove records from a table.</li>
+      </ul>
+
+      <h2 id="1-select-statement">
+        1. SELECT Statement<a
+          class="anchorjs-link"
+          href="#1-select-statement"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>
+        The
+        <code class="language-plaintext highlighter-rouge">SELECT</code>
+        statement is used to query and retrieve data from a database. It is one
+        of the most frequently used DML commands.
+      </p>
+
+      <h3 id="syntax">
+        Syntax<a
+          class="anchorjs-link"
+          href="#syntax"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+<span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="example">
+        Example<a
+          class="anchorjs-link"
+          href="#example"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">SELECT</span> <span class="n">NAME</span> <span class="k">FROM</span> <span class="n">TABLE1</span> <span class="k">WHERE</span> <span class="k">CLASS</span> <span class="k">BETWEEN</span> <span class="mi">12</span> <span class="k">AND</span> <span class="mi">14</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">TABLE1</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="n">NAME</span> <span class="k">FROM</span> <span class="n">TABLE1</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="n">ID</span><span class="p">,</span><span class="n">NAME</span> <span class="n">FRON</span> <span class="n">TABLE1</span><span class="p">;</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h2 id="2-insert-statement">
+        2. INSERT Statement<a
+          class="anchorjs-link"
+          href="#2-insert-statement"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>
+        The
+        <code class="language-plaintext highlighter-rouge">INSERT</code>
+        statement is used to add new rows to a table that is simply talking
+        adding new rows of data into the database. Remeber rows represents the
+        data which are also called tuple(s).
+      </p>
+
+      <h3 id="syntax-1">
+        Syntax<a
+          class="anchorjs-link"
+          href="#syntax-1"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="k">table_name</span> <span class="p">(</span><span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...);</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="example-1">
+        Example<a
+          class="anchorjs-link"
+          href="#example-1"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">employees</span> <span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="n">NAME</span><span class="p">,</span><span class="k">CLASS</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nv">"Ball',13);
+</span></code></pre>
+        </div>
+      </div>
+
+      <h3 id="insert-multiple-rows">
+        Insert Multiple Rows<a
+          class="anchorjs-link"
+          href="#insert-multiple-rows"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">employees</span> <span class="p">(</span><span class="n">ID</span><span class="p">,</span><span class="n">NAME</span><span class="p">,</span><span class="k">CLASS</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nv">"Cat"</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span>
+       <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="nv">"Dog"</span><span class="p">,</span><span class="mi">14</span><span class="p">);</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h2 id="3-update-statement">
+        3. UPDATE Statement<a
+          class="anchorjs-link"
+          href="#3-update-statement"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>
+        The
+        <code class="language-plaintext highlighter-rouge">UPDATE</code>
+        statement is used to modify existing records in a table.
+      </p>
+
+      <h3 id="syntax-2">
+        Syntax<a
+          class="anchorjs-link"
+          href="#syntax-2"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">UPDATE</span> <span class="k">table_name</span>
+<span class="k">SET</span> <span class="n">column1</span> <span class="o">=</span> <span class="n">value1</span><span class="p">,</span> <span class="n">column2</span> <span class="o">=</span> <span class="n">value2</span><span class="p">,</span> <span class="p">...</span>
+<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="example-2">
+        Example<a
+          class="anchorjs-link"
+          href="#example-2"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">UPDATE</span> <span class="n">TABLE1</span>
+<span class="k">SET</span> <span class="n">NAME</span> <span class="o">=</span> <span class="nv">"APPLE"</span> <span class="k">WHERE</span> <span class="n">ID</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="tips">
+        Tips<a
+          class="anchorjs-link"
+          href="#tips"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <ul>
+        <li>
+          <strong
+            >Always Use
+            <code class="language-plaintext highlighter-rouge">WHERE</code>
+            Clause:</strong
+          >
+          Without it, all records in the table will be updated.
+        </li>
+        <li>
+          <strong
+            >Check with
+            <code class="language-plaintext highlighter-rouge">SELECT</code>
+            Before
+            <code class="language-plaintext highlighter-rouge">UPDATE</code
+            >:</strong
+          >
+          Verify the records that will be affected.
+        </li>
+      </ul>
+
+      <h3 id="example-of-checking-records">
+        Example of Checking Records<a
+          class="anchorjs-link"
+          href="#example-of-checking-records"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">TABLE1</span> <span class="k">WHERE</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s1">'SUBEDI'</span><span class="p">;</span>
+</code></pre>
+        </div>
+      </div>
+
+      <p>
+        <strong>Explanation:</strong> This query helps verify which records will
+        be updated.
+      </p>
+
+      <h2 id="4-delete-statement">
+        4. DELETE Statement<a
+          class="anchorjs-link"
+          href="#4-delete-statement"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>
+        The
+        <code class="language-plaintext highlighter-rouge">DELETE</code>
+        statement is used to remove existing records from a table.
+      </p>
+
+      <h3 id="syntax-3">
+        Syntax<a
+          class="anchorjs-link"
+          href="#syntax-3"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">DELETE</span> <span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre>
+        </div>
+      </div>
+
+      <h3 id="example-3">
+        Example<a
+          class="anchorjs-link"
+          href="#example-3"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h3>
+
+      <div class="language-sql highlighter-rouge">
+        <div class="highlight">
+          <pre
+            class="highlight"
+          ><code><span class="k">DELETE</span> <span class="n">NAME</span> <span class="k">FROM</span> <span class="n">TABLE1</span>
+<span class="k">WHERE</span> <span class="n">ID</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">;</span>
+</code></pre>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          <strong
+            >Always Use
+            <code class="language-plaintext highlighter-rouge">WHERE</code>
+            Clause:</strong
+          >
+          Without it, all records in the table will be deleted.
+        </li>
+      </ul>
+
+      <h2 id="5-importance-of-dml">
+        5. Importance of DML<a
+          class="anchorjs-link"
+          href="#5-importance-of-dml"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>DML commands are crucial for:</p>
+
+      <ul>
+        <li>
+          <strong>Data Management:</strong> Performing CRUD (Create, Read,
+          Update, Delete) operations.
+        </li>
+        <li>
+          <strong>Data Analysis:</strong> Querying and updating data for
+          analysis and reporting.
+        </li>
+        <li>
+          <strong>Application Development:</strong> Building and maintaining
+          dynamic applications.
+        </li>
+        <li>
+          <strong>Database Maintenance:</strong> Keeping data up-to-date and
+          accurate.
+        </li>
+      </ul>
+
+      <h2 id="conclusion">
+        Conclusion<a
+          class="anchorjs-link"
+          href="#conclusion"
+          aria-label="Anchor"
+          data-anchorjs-icon=""
+          style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em"
+        ></a>
+      </h2>
+
+      <p>
+        Data Manipulation Language (DML) commands are fundamental tools for
+        managing and manipulating data in a relational database. Mastery of
+        these commands will help you perform essential tasks such as querying
+        data, adding new records, updating existing data, and deleting obsolete
+        information.
+      </p>
+    </div>
+  </body>
+</html>

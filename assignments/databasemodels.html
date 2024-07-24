@@ -65,11 +65,33 @@
         there is a single parent for each record. This model is best suited for
         one-to-many relationships.
       </p>
+      <p>
+        Here the data is structuered into a tree-like strucutre, with a single
+        root, to which all other data is connected. Each parent can have
+        multiple children, but each child can have only one parent.
+      </p>
+      <p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvIMcS0eYdUWb2J3FuFCeB-DZqrnfD7riwnQ&s"
+          alt="Hierarchical Database Model"
+        />
+      </p>
       <h3>2. Network Database Model</h3>
       <p>
         The network database model allows each record to have multiple parent
         and child records, creating a more flexible structure. This model is
         best suited for many-to-many relationships.
+      </p>
+      <p>
+        In network database models, each child can have multiple parents. Thus,
+        there is a greater flexibility in the structure of the data. This model
+        was the precursor to the relational database model.
+      </p>
+      <p>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwG78ZmZ5V2BpV4UmM1yX4ZFCAaHAlZ_vbbQ&s"
+          alt="Network Database Model"
+        />
       </p>
       <h3>3. Relational Database Model</h3>
       <p>
@@ -78,6 +100,53 @@
         complex data relationships and is the most widely used database model
         today.
       </p>
+      <p>
+        <img
+          src="https://planetscale.com/assets/blog/content/schema-design-101-relational-databases/db72cc3ac506bec544588454972113c4dc3abe50-1953x1576.png"
+          alt="Relational Database Model"
+        />
+      </p>
     </div>
+
+    <hr />
+    <div>
+      <h2>Relationships in SQL</h2>
+
+      <p>
+        In SQL, relationships are defined between tables using foreign keys. A
+        foreign key is a column or a set of columns in one table that references
+        the primary key columns in another table. This establishes a link
+        between the two tables.
+      </p>
+
+      <h3>Types of Relationships (briefly defined)</h3>
+
+      <ul>
+        <li>One-to-One</li>
+        <p>
+          In a one to one relationship each record in a table is linked to a
+          single record from another table and vice versa. This type of
+          relationship is not very common but is used when data is required to
+          be split in one to one forms.
+        </p>
+        <li>One-to-Many</li>
+        <p>
+          In a one to many relationship a single entity in a database is allowed
+          to be related to multiple entities. This type of relationship is the
+          most common type of relationship in a database.
+        </p>
+        <p>eg. (many) orders can be issued by (single) user.</p>
+        <li>Many-To-Many</li>
+        <p>
+          In a many to many relationship, multple records can be related to
+          multiple records in another table. This type of relationship requires
+          a junction or a pivot table to contain relationship links. Examples:
+          (single) student can be ignored in (many) courses, and (single) course
+          can have (mutliple) enrolees.
+        </p>
+      </ul>
+    </div>
+
+    <script src="../scripts/index.js"></script>
   </body>
 </html>
